@@ -143,8 +143,8 @@
 
       <div class="project">
         <a href="https://github.com/murguia/pdf-newsletter-converter" target="_blank" rel="noopener">pdf-newsletter-converter</a>
-        <p>Converts scanned PDFs of I.F. Stone's Weekly (1953–1971) into structured JSON for RAG search. Uses a hybrid pipeline: PyMuPDF for text extraction, Claude Sonnet for visual layout analysis, and OpenCV for sidebar detection.</p>
-        <div class="tech">PyMuPDF · Claude Sonnet · OpenCV · Pinecone · OpenAI embeddings</div>
+        <p>Converts scanned PDFs of I.F. Stone's Weekly (1953–1971) into structured JSON for RAG search. The VLM prompt design went through three iterations: first pure regex heuristics (brittle, column-unaware), then a bounding-box approach where Claude Sonnet saw only the page image and returned article coordinates for geometric line matching (failed on dense 2-column pages), and finally a block-assignment approach where the VLM receives both the page image and a numbered list of PyMuPDF-extracted text blocks with positions, directly grouping blocks into articles by content and visual layout. Key prompt rules emerged from testing: explicit instructions not to merge consecutive articles in the same column (the VLM would bundle small notes together) and to reference only blocks on the current page (it hallucinated cross-page block IDs). OpenCV detects bordered sidebars, and a Haiku stitching pass merges fragments across pages.</p>
+        <div class="tech">PyMuPDF · Claude Sonnet · Claude Haiku · OpenCV · Pinecone · OpenAI embeddings</div>
       </div>
 
       <div class="project">
