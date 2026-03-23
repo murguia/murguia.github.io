@@ -79,17 +79,79 @@
       background: #1a1a1a;
       color: #fafafa;
     }
+
+    .projects {
+      margin-top: 2.5rem;
+      text-align: left;
+      max-width: 480px;
+    }
+
+    .projects h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .project {
+      margin-bottom: 1.25rem;
+    }
+
+    .project a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .project p {
+      color: #666;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-top: 0.25rem;
+    }
+
+    .project .tech {
+      color: #999;
+      font-size: 0.75rem;
+      margin-top: 0.2rem;
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="initials">RM</div>
     <h1>Raul Murguia</h1>
-    <p class="tagline">Welcome to my corner of the internet.</p>
     <div class="links">
       <a href="https://www.linkedin.com/in/raulmurguia/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/murguia" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:raul.murguia@gmail.com">Email</a>
+    </div>
+
+    <div class="projects">
+      <h2>Selected Projects</h2>
+
+      <div class="project">
+        <a href="https://github.com/murguia/fedmin-chat" target="_blank" rel="noopener">fedmin-chat</a>
+        <p>Conversational AI interface for exploring Federal Reserve Board of Governors meeting minutes (1967–1973). Semantic search and natural language Q&A about monetary policy during a pivotal economic era.</p>
+        <div class="tech">Next.js · OpenAI · Pinecone · RAG</div>
+      </div>
+
+      <div class="project">
+        <a href="https://github.com/murguia/pdf-newsletter-converter" target="_blank" rel="noopener">pdf-newsletter-converter</a>
+        <p>Converts scanned PDFs of I.F. Stone's Weekly (1953–1971) into structured JSON for RAG search. Uses a hybrid pipeline: PyMuPDF for text extraction, Claude Sonnet for visual layout analysis, and OpenCV for sidebar detection.</p>
+        <div class="tech">PyMuPDF · Claude Sonnet · OpenCV · Pinecone · OpenAI embeddings</div>
+      </div>
+
+      <div class="project">
+        <a href="https://github.com/murguia/ifstone-search" target="_blank" rel="noopener">ifstone-search</a>
+        <p>AI-powered semantic search over I.F. Stone's Weekly archive (1953–1971). Ask questions about investigative journalism and get AI-generated answers with citations.</p>
+        <div class="tech">Next.js · OpenAI · Pinecone · RAG</div>
+      </div>
     </div>
   </div>
 </body>
