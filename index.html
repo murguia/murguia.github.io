@@ -169,7 +169,7 @@
 <body>
   <div class="card">
     <img class="avatar" src="/manhole-cover.png" alt="Murguia manhole cover">
-    <p class="avatar-caption">Photo taken in Murguia, Spain — The Basque Country</p>
+    <p class="avatar-caption">Photo taken in Murguia, Spain — the Basque Country</p>
     <h1>Raul Murguia</h1>
     <div class="links">
       <a href="https://www.linkedin.com/in/raulmurguia/" target="_blank" rel="noopener">LinkedIn</a>
@@ -205,6 +205,15 @@
           <p>Converts scanned PDFs of I.F. Stone's Weekly (1953–1971) into structured JSON for RAG search. The VLM prompt design went through three iterations: first pure regex heuristics (brittle, column-unaware), then a bounding-box approach where Claude Sonnet saw only the page image and returned article coordinates for geometric line matching (failed on dense 2-column pages), and finally a block-assignment approach where the VLM receives both the page image and a numbered list of PyMuPDF-extracted text blocks with positions, directly grouping blocks into articles by content and visual layout. Key prompt rules emerged from testing: explicit instructions not to merge consecutive articles in the same column (the VLM would bundle small notes together) and to reference only blocks on the current page (it hallucinated cross-page block IDs). OpenCV detects bordered sidebars, and a Haiku stitching pass merges fragments across pages.</p>
           <div class="tech">PyMuPDF · Claude Sonnet · Claude Haiku · OpenCV · Pinecone · OpenAI embeddings</div>
         </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <a href="https://github.com/murguia/relativity-racer" target="_blank" rel="noopener">relativity-racer</a>
+          <a href="https://github.com/murguia/relativity-racer" target="_blank" rel="noopener" class="github-link" title="View source on GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        </div>
+        <p><strong>Geodesic Engine — Relativistic Flight Simulator.</strong> An interactive web-based simulator that models motion and vision in curved spacetime using differential geometry. Integrates geodesic equations derived from a metric tensor to simulate both spacecraft trajectories (timelike paths) and light propagation (null geodesics). Features a real-time cockpit view that renders gravitational lensing and black hole shadows by ray tracing photon paths from a local observer frame attached to the spacecraft. Inspired by <em>Structure and Interpretation of Classical Mechanics</em> and <em>Functional Differential Geometry</em>, emphasizing coordinate-invariant, geometry-driven computation.</p>
+        <div class="tech">TypeScript · Canvas/WebGL (planned) · numerical ODE integration · differential geometry</div>
       </div>
     </div>
   </div>
