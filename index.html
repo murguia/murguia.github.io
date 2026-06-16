@@ -154,6 +154,39 @@
       margin-top: 0.2rem;
     }
 
+    .thumbs {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .thumbs a {
+      flex: 1;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .thumbs a:hover {
+      border-color: #1a1a1a;
+      transform: translateY(-2px);
+    }
+
+    .thumbs img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .thumbs-caption {
+      color: #999;
+      font-size: 0.72rem;
+      font-style: italic;
+      margin-top: 0.4rem;
+    }
+
     .subproject {
       margin-top: 0.75rem;
       padding-left: 1rem;
@@ -207,6 +240,13 @@
           <a href="https://github.com/murguia/ifstone-search" target="_blank" rel="noopener" class="github-link" title="View source on GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
         </div>
         <p>Conversational AI search across I.F. Stone's Weekly (1953–1971) — 751 issues and 6,200+ articles from one of the most influential independent political newsletters in American journalism. For each question, a gpt-4o tool-calling agent plans its own research — issuing multiple scoped searches (by date range, author, or document type) and drilling into specific articles, each step shown as a live research trace. Every search runs as hybrid retrieval, fusing semantic (pgvector) and lexical (Postgres full-text) results via reciprocal rank fusion; the agent's findings are then deduped and synthesized into a cited answer grounded in the original text. If the agent fails, it falls back to a self-query parse that infers filters from the question — asking what Stone thought about Vietnam "before the LBJ administration" scopes results to articles dated before November 1963. Index-topic boosting <em>(Work in Progress)</em> will let Stone's own annual index categorizations influence ranking. Inline citations link directly to source articles and original PDFs.</p>
+        <div class="thumbs">
+          <a href="https://www.ifstone.org/weekly/IFStonesWeekly-1957jun24.pdf" target="_blank" rel="noopener"><img src="/ifstone/1957jun24-1.jpg" alt="I.F. Stone's Weekly, Vol. V No. 25, page 1" loading="lazy"></a>
+          <a href="https://www.ifstone.org/weekly/IFStonesWeekly-1957jun24.pdf" target="_blank" rel="noopener"><img src="/ifstone/1957jun24-2.jpg" alt="I.F. Stone's Weekly, Vol. V No. 25, page 2" loading="lazy"></a>
+          <a href="https://www.ifstone.org/weekly/IFStonesWeekly-1957jun24.pdf" target="_blank" rel="noopener"><img src="/ifstone/1957jun24-3.jpg" alt="I.F. Stone's Weekly, Vol. V No. 25, page 3" loading="lazy"></a>
+          <a href="https://www.ifstone.org/weekly/IFStonesWeekly-1957jun24.pdf" target="_blank" rel="noopener"><img src="/ifstone/1957jun24-4.jpg" alt="I.F. Stone's Weekly, Vol. V No. 25, page 4" loading="lazy"></a>
+        </div>
+        <p class="thumbs-caption">A complete issue — Vol. V, No. 25, June 24, 1957. Click to read the original.</p>
         <div class="tech">Next.js · OpenAI · Postgres + pgvector (Supabase) · Agentic RAG</div>
 
         <div class="subproject">
